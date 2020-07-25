@@ -13,7 +13,7 @@ num_subjects = size(X, 3);
 [effect_edge] = edgeEntropy(X);
 % effect_edge = X;
 [I, p, s, r] = find_p(effect_edge, Y);
-X = effect_edge(:,I(1:120));
+X = effect_edge(:,I(1:features));
 
 [accuracy_val, specificity_val, sensitivity_val, sub_graph] = leave_one_out_SVM_func(X, Y, features);
 
